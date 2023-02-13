@@ -4,9 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Interacive Card Form</title>
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <form id="card-form" action="POST" class="card-form">
+      <div class="form-control">
+        <label for="name">Cardholder Name</label>
+        <input id="name" type="text" placeholder="e.g. Jane Appleseed" />
+      </div>
+      <div class="form-control">
+        <label for="cardnumber">Card Number</label>
+        <input
+          id="cardnumber"
+          type="text"
+          maxlength="16"
+          placeholder="e.g. 1234 5678 9123 0000"
+        />
+      </div>
+      <div class="form-control">
+        <label for="month">Exp. Date (MM/YY)</label>
+        <input id="month" type="text" maxlength="2" placeholder="MM" />
+        <input id="year" type="text" maxlength="2" placeholder="YY" />
+      </div>
+      <div class="form-control">
+        <label for="cvc">CVC</label>
+        <input id="cvc" type="text" maxlength="3" placeholder="e.g. 123" />
+      </div>
+      <button type="submit">Confirm</button>
+    </form>
   </body>
+  <script src="index.js"></script>
 </html>

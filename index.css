@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  max-width: 1300px;
+  background: hsl(0, 0%, 100%);
+}
+
+.card-form {
+  padding: 15px;
+  color: hsl(278, 68%, 11%);
+}
+
+.form-control label {
+  text-transform: uppercase;
+}
+
+.form-control input {
+  display: block;
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.form-control input::placeholder {
+  color: hsl(270, 3%, 87%);
+}
+
+.card-form button {
+  width: 100%;
+  padding: 10px 0;
+  background: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 6px;
+}
