@@ -11,7 +11,33 @@ body {
   background: hsl(0, 0%, 100%);
 }
 
+.background {
+  background: url('./images/bg-main-mobile.png');
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 240px;
+}
+
+.card {
+  width: 300px;
+}
+
+.card-back {
+  position: absolute;
+  top: 30px;
+  right: 15px;
+}
+
+.card-front {
+  position: absolute;
+  z-index: 1;
+  left: 15px;
+  top: 122px;
+}
+
 .card-form {
+  margin-top: 300px;
   padding: 15px 20px;
   color: hsl(278, 68%, 11%);
 }
