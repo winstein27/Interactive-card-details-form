@@ -48,6 +48,7 @@ body {
   left: 30px;
 }
 
+.card span,
 .card p {
   color: hsl(0, 0%, 100%);
   position: absolute;
@@ -72,7 +73,20 @@ body {
   top: 235px;
   left: 30px;
 }
-.card .card-date {
+
+.card .card-month {
+  font-size: 12px;
+  top: 235px;
+  right: 101px;
+}
+
+.card span {
+  font-size: 12px;
+  top: 245px;
+  right: 93px;
+}
+
+.card .card-year {
   font-size: 12px;
   top: 235px;
   right: 75px;
