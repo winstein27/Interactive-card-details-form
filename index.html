@@ -19,8 +19,15 @@
   </head>
   <body>
     <div class="background">
-      <img src="/images/bg-card-back.png" alt="" class="card card-back" />
-      <img src="/images/bg-card-front.png" alt="" class="card card-front" />
+      <div class="card">
+        <img src="/images/bg-card-back.png" alt="" class="card-back" />
+        <p id="card-cvc" class="card-cvc">000</p>
+        <img src="/images/bg-card-front.png" alt="" class="card-front" />
+        <img src="/images/card-logo.svg" alt="" class="card-logo" />
+        <p id="card-number" class="card-number">0000 0000 0000 0000</p>
+        <p id="card-name" class="card-name">Jane Appleseed</p>
+        <p id="card-date" class="card-date">00/00</p>
+      </div>
     </div>
     <form id="card-form" action="POST" class="card-form">
       <div class="form-control">
