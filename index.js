@@ -1,4 +1,5 @@
 const cardForm = document.querySelector('#card-form');
+const successScreen = document.querySelector('#success-screen');
 
 const nameInput = document.querySelector('#name-input');
 const numberInput = document.querySelector('#number-input');
@@ -14,6 +15,12 @@ const cardCVC = document.querySelector('#card-cvc');
 
 const onSubmit = (event) => {
   event.preventDefault();
+
+  // #TODO implement validation
+  if (true) {
+    cardForm.style.display = 'none';
+    successScreen.style.display = 'block';
+  }
 };
 
 const onNameChange = (event) => {

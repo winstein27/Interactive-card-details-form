@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <div class="background">
+    <section class="background">
       <div class="card">
         <img src="/images/bg-card-back.png" alt="" class="card-back" />
         <p id="card-cvc" class="card-cvc">000</p>
@@ -30,39 +30,53 @@
         <span>/</span>
         <p id="card-year" class="card-year">00</p>
       </div>
-    </div>
-    <form id="card-form" action="POST" class="card-form">
-      <div class="form-control">
-        <label for="name-input">Cardholder Name</label>
-        <input id="name-input" type="text" placeholder="e.g. Jane Appleseed" />
+    </section>
+
+    <section class="content">
+      <form id="card-form" action="POST" class="card-form">
+        <div class="form-control">
+          <label for="name-input">Cardholder Name</label>
+          <input
+            id="name-input"
+            type="text"
+            placeholder="e.g. Jane Appleseed"
+          />
+        </div>
+        <div class="form-control">
+          <label for="number-input">Card Number</label>
+          <input
+            id="number-input"
+            type="text"
+            maxlength="16"
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+        </div>
+        <div class="form-control date">
+          <label for="month-input">Exp. Date (MM/YY)</label>
+          <input id="month-input" type="text" maxlength="2" placeholder="MM" />
+          <input id="year-input" type="text" maxlength="2" placeholder="YY" />
+        </div>
+        <div class="form-control cvc">
+          <label for="cvc-input">CVC</label>
+          <input
+            id="cvc-input"
+            type="text"
+            maxlength="3"
+            placeholder="e.g. 123"
+          />
+        </div>
+        <div class="form-control">
+          <button type="submit" class="button">Confirm</button>
+        </div>
+      </form>
+
+      <div id="success-screen" class="success">
+        <img src="/images/icon-complete.svg" alt="" />
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <button type="button" class="button">Continue</button>
       </div>
-      <div class="form-control">
-        <label for="number-input">Card Number</label>
-        <input
-          id="number-input"
-          type="text"
-          maxlength="16"
-          placeholder="e.g. 1234 5678 9123 0000"
-        />
-      </div>
-      <div class="form-control date">
-        <label for="month-input">Exp. Date (MM/YY)</label>
-        <input id="month-input" type="text" maxlength="2" placeholder="MM" />
-        <input id="year-input" type="text" maxlength="2" placeholder="YY" />
-      </div>
-      <div class="form-control cvc">
-        <label for="cvc-input">CVC</label>
-        <input
-          id="cvc-input"
-          type="text"
-          maxlength="3"
-          placeholder="e.g. 123"
-        />
-      </div>
-      <div class="form-control">
-        <button type="submit">Confirm</button>
-      </div>
-    </form>
+    </section>
   </body>
   <script src="index.js"></script>
 </html>

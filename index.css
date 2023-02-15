@@ -92,9 +92,12 @@ body {
   right: 75px;
 }
 
-.card-form {
+.content {
   margin-top: 300px;
   padding: 15px 20px;
+}
+
+.card-form {
   color: hsl(278, 68%, 11%);
 }
 
@@ -141,10 +144,30 @@ body {
   width: 100%;
 }
 
-.form-control button {
+.button {
   width: 100%;
   padding: 10px 0;
   background: hsl(278, 68%, 11%);
   color: hsl(0, 0%, 100%);
   border-radius: 6px;
+  border: none;
+}
+
+.success {
+  display: none;
+  text-align: center;
+}
+
+.success h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  color: hsl(278, 68%, 11%);
+  letter-spacing: 2.5px;
+  margin: 25px 0;
+}
+
+.success p {
+  display: block;
+  color: hsl(279, 6%, 55%);
+  margin-bottom: 40px;
 }
