@@ -1,0 +1,46 @@
+.card-form {
+  color: hsl(278, 68%, 11%);
+}
+
+.form-control {
+  padding: 10px 0;
+}
+
+.form-control label {
+  text-transform: uppercase;
+  display: block;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.form-control input {
+  display: block;
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-control input:active {
+  border-color: hsl(249, 99%, 64%);
+}
+
+.form-control input::placeholder {
+  color: hsl(270, 3%, 87%);
+}
+
+.date,
+.cvc {
+  display: inline-block;
+  width: 49%;
+  vertical-align: middle;
+}
+
+.date input {
+  display: inline-block;
+  width: 48%;
+}
+
+.cvc input {
+  width: 100%;
+}
