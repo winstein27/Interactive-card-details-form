@@ -78,3 +78,70 @@
   top: 235px;
   right: 75px;
 }
+
+@media (min-width: 1000px) {
+  .background {
+    background: url('../images/bg-main-desktop.png');
+    left: 0;
+    height: 100%;
+    width: 320px;
+  }
+
+  .card {
+    height: 50%;
+    top: 50%;
+    margin: 0;
+    width: 500px;
+  }
+
+  .card-front {
+    top: -177px;
+    left: 120px;
+  }
+
+  .card-back {
+    top: 12px;
+    left: 190px;
+  }
+
+  .card .card-number,
+  .card .card-logo {
+    left: 145px;
+  }
+
+  .card .card-logo {
+    top: -155px;
+  }
+
+  .card .card-number {
+    top: -110px;
+  }
+
+  .card .card-name,
+  .card .card-month,
+  .card .card-year {
+    top: -55px;
+  }
+
+  .card .card-name {
+    left: 145px;
+  }
+
+  .card .card-month {
+    left: 346px;
+  }
+
+  .card span {
+    top: -45px;
+    left: 365px;
+  }
+
+  .card .card-year {
+    left: 372px;
+  }
+
+  .card .card-cvc {
+    top: 73px;
+    left: 430px;
+  }
+}
