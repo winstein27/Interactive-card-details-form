@@ -44,3 +44,16 @@
 .cvc input {
   width: 100%;
 }
+
+@media (min-width: 1000px) {
+  .card-form {
+    max-width: 380px;
+    position: relative;
+    top: calc(50% - 186.4px);
+    margin: 0 auto;
+  }
+
+  .form-control label {
+    text-align: left;
+  }
+}
