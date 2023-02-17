@@ -12,7 +12,6 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-  max-width: 1300px;
   background: hsl(0, 0%, 100%);
 }
 
@@ -32,10 +31,11 @@ body {
 
 @media (min-width: 1000px) {
   .content {
-    margin-top: 0;
-    margin-left: 570px;
+    margin: 0;
     padding: 0;
-    height: 100%;
+    width: calc(100% - 330px);
     text-align: center;
+    vertical-align: middle;
+    display: inline-block;
   }
 }

@@ -82,9 +82,11 @@
 @media (min-width: 1000px) {
   .background {
     background: url('../images/bg-main-desktop.png');
-    left: 0;
+    position: static;
     height: 100%;
     width: 320px;
+    vertical-align: middle;
+    display: inline-block;
   }
 
   .card {
@@ -92,6 +94,7 @@
     top: 50%;
     margin: 0;
     width: 500px;
+    z-index: 1;
   }
 
   .card-front {
