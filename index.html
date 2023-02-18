@@ -47,21 +47,36 @@
           <input
             id="number-input"
             type="text"
-            maxlength="16"
+            inputmode="numeric"
+            maxlength="19"
             placeholder="e.g. 1234 5678 9123 0000"
           />
         </div>
         <div class="form-control date">
           <label for="month-input">Exp. Date (MM/YY)</label>
-          <input id="month-input" type="text" maxlength="2" placeholder="MM" />
-          <input id="year-input" type="text" maxlength="2" placeholder="YY" />
+          <input
+            id="month-input"
+            type="number"
+            min="1"
+            max="12"
+            placeholder="MM"
+          />
+          <input
+            id="year-input"
+            type="number"
+            min="23"
+            max="30"
+            placeholder="YY"
+          />
         </div>
         <div class="form-control cvc">
           <label for="cvc-input">CVC</label>
           <input
             id="cvc-input"
-            type="text"
-            maxlength="3"
+            type="number"
+            maxlength="2"
+            min="0"
+            max="999"
             placeholder="e.g. 123"
           />
         </div>
