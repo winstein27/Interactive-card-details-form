@@ -53,18 +53,6 @@ monthInput.addEventListener('input', onMonthChange);
 yearInput.addEventListener('input', onYearChange);
 cvcInput.addEventListener('input', onCVCChange);
 
-const onSubmit = (event) => {
-  event.preventDefault();
-
-  // #TODO implement validation
-  if (true) {
-    cardForm.style.display = 'none';
-    successScreen.style.display = 'block';
-  }
-};
-
-cardForm.addEventListener('submit', onSubmit);
-
 const maskCardNumber = (event) => {
   // Key pressed is not backspace or delete
   if (event.keyCode != 46 && event.keyCode != 8) {
@@ -76,3 +64,41 @@ const maskCardNumber = (event) => {
 };
 
 document.addEventListener('keydown', maskCardNumber);
+
+const onSubmit = (event) => {
+  event.preventDefault();
+
+  let formIsValid = true;
+
+  const name = nameInput.value.trim();
+  if (name.length < 4 || !name.includes(' ')) {
+    formIsValid = false;
+  }
+
+  const number = numberInput.value.trim();
+  if (number.length !== 19) {
+    formIsValid = false;
+  }
+
+  const month = +monthInput.value.trim();
+  if (month < 1 || month > 12) {
+    formIsValid = false;
+  }
+
+  const year = +yearInput.value.trim();
+  if (year < 23 || year > 30) {
+    formIsValid = false;
+  }
+
+  const cvc = cvcInput.value.trim();
+  if (+cvc < 1 || +cvc > 999 || cvc.length !== 3) {
+    formIsValid = false;
+  }
+
+  if (formIsValid) {
+    cardForm.style.display = 'none';
+    successScreen.style.display = 'block';
+  }
+};
+
+cardForm.addEventListener('submit', onSubmit);
