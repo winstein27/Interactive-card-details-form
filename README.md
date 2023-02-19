@@ -16,8 +16,6 @@ This is a solution to the [Interactive card details form challenge on Frontend M
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -33,7 +31,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshots/mobile-view.png)
+![](./screenshots/desktop-view.png)
+![](./screenshots/invalid-inputs.png)
+![](./screenshots/success-screen.png)
 
 ### Links
 
@@ -51,42 +52,57 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+In this project, I used mobile first approach to build the design. It was easier than the previous ones, adapting from small to bigger screen is easier than the opposite. Furthermore, I used CSS position options to display things where I wanted.
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.background {
+  background: url('../images/bg-main-mobile.png');
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 240px;
+}
+
+.card {
+  width: 350px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.card-back {
+  position: absolute;
+  width: 300px;
+  top: 30px;
+  right: 0;
 }
 ```
 
+I tried to avoid code duplication developing a generic function to validate user inputs:
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉');
+const genericValidation = (name, value, condition, input, info) => {
+  if (condition) {
+    input.style.borderColor = 'hsl(0, 100%, 66%)';
+    info.textContent = 'Invalid ' + name;
+
+    if (!value.length) {
+      info.textContent = "Can't be blank";
+    }
+  } else {
+    input.style.borderColor = 'hsl(270, 3%, 87%)';
+    info.textContent = '';
+  }
 };
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+In the next project, I will use more of css size units and transitions. I am not very confortble with them yet, but I will explore them a lot.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [CSS - The Complete Guide 2023](https://www.example.com) - This is an amazing CSS course that I'm doing to improve my skills.
+- [Check if a String Contains Only Numbers in JavaScript](https://codingbeautydev.com/blog/javascript-check-if-string-contains-only-numbers/#:~:text=September%205%2C%202022-,To%20check%20if%20a%20string%20contains%20only%20numbers%20in%20JavaScript,Otherwise%2C%20it%20will%20return%20false%20.) - This is an article which helped building the Regex to validate the card number.
 
 ## Author
 
