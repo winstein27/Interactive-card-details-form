@@ -29,6 +29,14 @@
   color: hsl(270, 3%, 87%);
 }
 
+.form-control span {
+  color: hsl(0, 100%, 66%);
+  text-align: left;
+  display: block;
+  font-size: 14px;
+  margin-top: 3px;
+}
+
 .date,
 .cvc {
   display: inline-block;
